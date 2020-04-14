@@ -10,7 +10,7 @@ class Pangram {
         return convertPangram(inputString, checkPangram)
     }
 
-    fun ifPangram(msg: String): Boolean {
+    private fun ifPangram(msg: String): Boolean {
         var char = 'a'
         val str = msg.toLowerCase()
         var checkABC = 0
@@ -28,11 +28,10 @@ class Pangram {
                 }
             }
         }
-        return if (checkABC == 26) true
-        else false
+        return checkABC == 26
     }
 
-    fun convertPangram(msg: String, isPangram: Boolean): String {
+    private fun convertPangram(msg: String, isPangram: Boolean): String {
         var strArray = msg.split(" ").toMutableList()
         strArray =
             strArray.filterNot { it == "" || it == "\n" || it == """+""" || it == """"""" } as MutableList<String>
@@ -60,7 +59,7 @@ class Pangram {
         return getString(strArray)
     }
 
-    fun getString(arrayString: MutableList<String>): String {
+    private fun getString(arrayString: MutableList<String>): String {
         var msg = ""
         if (arrayString.size > 2) {
             for (i in 0..arrayString.size - 2) {
@@ -71,7 +70,7 @@ class Pangram {
         return msg
     }
 
-    fun replaceLetter(word: String, numberLetter: Int): String {
+    private fun replaceLetter(word: String, numberLetter: Int): String {
         val charArray = word.toCharArray().toMutableList()
         val char = word[numberLetter]
         charArray[numberLetter] = char.toUpperCase()
