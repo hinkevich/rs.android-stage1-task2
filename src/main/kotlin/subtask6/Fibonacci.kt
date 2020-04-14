@@ -1,8 +1,7 @@
 package subtask6
 
 class Fibonacci {
-
-
+    
     fun productFibonacciSequenceFor(n: Int): IntArray {
         var nunber = 0
         var numberNext = 1

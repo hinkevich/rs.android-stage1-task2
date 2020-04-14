@@ -1,6 +1,5 @@
 package subtask5
 
-
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import kotlin.reflect.KClass
@@ -28,6 +27,7 @@ class Blocks {
         val formatter = DateTimeFormatter.ofPattern("dd.MM.YYYY")
         return LocalDate.ofEpochDay(arrayDate.last() - 365).format(formatter)
     }
+
     fun operationString(array: Array<Any>): Any {
         var msg = ""
         for (element in array)
@@ -36,6 +36,7 @@ class Blocks {
             }
         return msg
     }
+
     fun operationInt(array: Array<Any>): Any {
         var summa = 0
         for (element in array)

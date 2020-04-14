@@ -1,6 +1,5 @@
 package subtask4
 
-import java.lang.StringBuilder
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -60,7 +59,6 @@ class Pangram {
 
         return getString(strArray)
     }
-
 
     fun getString(arrayString: MutableList<String>): String {
         var msg = ""
