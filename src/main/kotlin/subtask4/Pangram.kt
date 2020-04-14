@@ -82,4 +82,3 @@ class Pangram {
         return words
     }
 }
-

@@ -24,6 +24,5 @@ class TimeConverter {
             60 -> "${time[hour.toInt() + 1]} o' clock"
             else -> ""
         }
-
     }
 }
