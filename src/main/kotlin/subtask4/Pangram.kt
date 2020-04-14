@@ -6,12 +6,10 @@ import java.util.regex.Pattern
 
 class Pangram {
 
-
     fun getResult(inputString: String): String {
         val checkPangram = ifPangram(inputString)
         return convertPangram(inputString, checkPangram)
     }
-
 
     fun ifPangram(msg: String): Boolean {
         var char = 'a'
@@ -39,7 +37,7 @@ class Pangram {
         var strArray = msg.split(" ").toMutableList()
         strArray =
             strArray.filterNot { it == "" || it == "\n" || it == """+""" || it == """"""" } as MutableList<String>
-        var regEX: String
+        val regEX: String
         if (isPangram) {
             regEX = "[aeuioy]"
         } else {
@@ -74,15 +72,16 @@ class Pangram {
         } else msg = ""
         return msg
     }
-    fun replaceLetter (word:String, numberLetter:Int):String {
-        val charArray =word.toCharArray().toMutableList()
-        val char =word[numberLetter]
-        charArray[numberLetter]=char.toUpperCase()
-        var words=""
-        for (letter in charArray){
-            words=words+letter
+
+    fun replaceLetter(word: String, numberLetter: Int): String {
+        val charArray = word.toCharArray().toMutableList()
+        val char = word[numberLetter]
+        charArray[numberLetter] = char.toUpperCase()
+        var words = ""
+        for (letter in charArray) {
+            words = words + letter
         }
         return words
-}
+    }
 }
 
